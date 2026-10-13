@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f4f9fc;
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fbff 0%, #f1f7fb 46%, #eef7fb 100%);
+  color: #0f172a;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.app-shell {
+  background:
+    linear-gradient(90deg, rgba(14, 165, 233, 0.08), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f4f9fc 44%, #eef7fb 100%);
+}
+
+.dark body,
+.dark .app-shell {
+  background:
+    linear-gradient(135deg, #061528 0%, #0a1f3a 48%, #061528 100%);
+  color: #f8fafc;
+}
+
+.light body,
+.light .app-shell,
+body {
+  background: #eef7fb;
+  color: #0f172a;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(203, 213, 225, 0.82);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.dark .glass {
+  background: rgba(8, 27, 50, 0.72);
+  border-color: rgba(148, 233, 255, 0.18);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+.neon-text {
+  color: #0369a1;
+  text-shadow: none;
+}
+
+.dark .neon-text {
+  color: #bdf8ff;
+  text-shadow: 0 0 24px rgba(40, 231, 255, 0.55);
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-600 focus:outline-none focus:ring-4 focus:ring-sky-200 disabled:hover:translate-y-0;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-sky-200 bg-white px-5 py-3 font-semibold text-sky-700 shadow-sm transition hover:border-sky-300 hover:bg-sky-50 focus:outline-none focus:ring-4 focus:ring-sky-100;
+}
+
+.dark .button-secondary {
+  @apply border-cyan-200/30 bg-transparent text-cyan-100 hover:border-cyan-200/70 hover:bg-cyan-200/10;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-4 focus:ring-sky-100;
+}
+
+.dark .input {
+  @apply border-cyan-200/20 bg-white/5 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300/10;
+}
+
+.glass [class~="text-slate-300"] {
+  color: #475569;
+}
+
+.glass [class~="text-slate-400"] {
+  color: #64748b;
+}
+
+.glass [class~="text-cyan-100"],
+.glass [class~="text-cyan-200"] {
+  color: #0369a1;
+}
+
+.glass [class~="bg-white/5"],
+.glass [class~="bg-white/8"],
+.glass [class~="bg-white/10"] {
+  background-color: rgba(241, 245, 249, 0.82);
+}
+
+.dark .glass [class~="text-slate-300"] {
+  color: #cbd5e1;
+}
+
+.dark .glass [class~="text-slate-400"] {
+  color: #94a3b8;
+}
+
+.dark .glass [class~="text-cyan-100"] {
+  color: #cffafe;
+}
+
+.dark .glass [class~="text-cyan-200"] {
+  color: #a5f3fc;
+}
+
+.dark .glass [class~="bg-white/5"] {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .glass [class~="bg-white/8"] {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass [class~="bg-white/10"] {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page {
+  @apply mx-auto w-full max-w-7xl px-4 py-7 sm:px-6 lg:px-8;
+}
+
+.page-kicker {
+  @apply text-xs font-bold uppercase tracking-[0.2em] text-sky-600;
+}
+
+.page-title {
+  @apply mt-2 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl;
+}
+
+.page-subtitle {
+  @apply mt-3 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base;
+}
+
+.medical-card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.07)] transition duration-200;
+}
+
+.medical-card:hover {
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.1);
+}
+
+.medical-panel {
+  @apply rounded-2xl border border-sky-100 bg-gradient-to-br from-white to-sky-50/70 shadow-sm;
+}
+
+.metric-tile {
+  @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm;
+}
+
+.medical-table {
+  @apply w-full border-separate border-spacing-0 overflow-hidden text-left text-sm;
+}
+
+.medical-table th {
+  @apply border-b border-slate-200 bg-slate-50 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] text-slate-500;
+}
+
+.medical-table td {
+  @apply border-b border-slate-100 px-4 py-4 align-middle text-slate-700;
+}
+
+.medical-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.status-pill {
+  @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-bold;
+}
+
+.dark .page-kicker {
+  @apply text-cyan-200;
+}
+
+.dark .page-title {
+  @apply text-white;
+}
+
+.dark .page-subtitle {
+  @apply text-slate-300;
+}
+
+.dark .medical-card,
+.dark .metric-tile {
+  @apply border-cyan-200/15 bg-slate-900/70;
+}
+
+.dark .medical-panel {
+  @apply border-cyan-200/15 from-slate-900/80 to-slate-800/70;
+}
+
+.dark .medical-table th {
+  @apply border-cyan-200/10 bg-white/5 text-cyan-100/70;
+}
+
+.dark .medical-table td {
+  @apply border-cyan-200/10 text-slate-200;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Build files
+dist/
+build/
+coverage/
+
+# Uploaded images
+backend/uploads/*
+!backend/uploads/.gitkeep
+frontend/uploads/*
+!frontend/uploads/.gitkeep
+
+# Temporary files and logs
+tmp/
+*.log
